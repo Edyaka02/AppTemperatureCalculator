@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Calculator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvE-tI-bXv">
+                                <rect key="frame" x="16" y="20" width="343" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XvE-tI-bXv" secondAttribute="height" multiplier="343:99" id="QfK-dg-qgF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Enter Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnR-pR-ErF">
+                                <rect key="frame" x="16" y="134" width="343" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Temp1" translatesAutoresizingMaskIntoConstraints="NO" id="QjQ-bh-nr1">
+                                <rect key="frame" x="16" y="265" width="343" height="205"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0 Celsius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGc-L6-uEy">
+                                <rect key="frame" x="16" y="507" width="343" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s0f-c4-WFo">
+                                <rect key="frame" x="16" y="200" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="convert:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="X8l-PG-yx2"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TSO-zU-ZOh">
+                                <rect key="frame" x="16" y="561" width="343" height="32"/>
+                                <segments>
+                                    <segment title="to Celsius"/>
+                                    <segment title="to Fahrenheit"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="switchConversion:" destination="BYZ-38-t0r" eventType="valueChanged" id="187-Gu-YFA"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QjQ-bh-nr1" secondAttribute="trailing" constant="16" id="0Eo-Oe-IB1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s0f-c4-WFo" secondAttribute="trailing" constant="16" id="0Ow-6C-LCT"/>
+                            <constraint firstItem="XvE-tI-bXv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1Hd-Jz-mxq"/>
+                            <constraint firstItem="XGc-L6-uEy" firstAttribute="height" secondItem="VnR-pR-ErF" secondAttribute="height" id="29J-3q-rD4"/>
+                            <constraint firstItem="XGc-L6-uEy" firstAttribute="top" secondItem="QjQ-bh-nr1" secondAttribute="bottom" constant="37" id="8GM-Cv-wyh"/>
+                            <constraint firstItem="s0f-c4-WFo" firstAttribute="height" secondItem="VnR-pR-ErF" secondAttribute="height" id="AEi-s4-Ozw"/>
+                            <constraint firstItem="VnR-pR-ErF" firstAttribute="top" secondItem="XvE-tI-bXv" secondAttribute="bottom" constant="15" id="JMm-jj-AWg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XvE-tI-bXv" secondAttribute="trailing" constant="16" id="LLV-N9-Arh"/>
+                            <constraint firstItem="XvE-tI-bXv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NbZ-9p-7oF"/>
+                            <constraint firstItem="VnR-pR-ErF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NdZ-AK-vMC"/>
+                            <constraint firstItem="s0f-c4-WFo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Y3n-oI-wvL"/>
+                            <constraint firstItem="TSO-zU-ZOh" firstAttribute="top" secondItem="XGc-L6-uEy" secondAttribute="bottom" constant="27" id="YpD-Zm-ibM"/>
+                            <constraint firstItem="QjQ-bh-nr1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cWs-TG-YlA"/>
+                            <constraint firstItem="s0f-c4-WFo" firstAttribute="top" secondItem="VnR-pR-ErF" secondAttribute="bottom" constant="8" symbolic="YES" id="jAT-Cu-Udg"/>
+                            <constraint firstItem="QjQ-bh-nr1" firstAttribute="top" secondItem="s0f-c4-WFo" secondAttribute="bottom" constant="29" id="n67-dY-snT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VnR-pR-ErF" secondAttribute="trailing" constant="16" id="sC6-u2-5tZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TSO-zU-ZOh" secondAttribute="bottom" constant="75" id="tvU-2d-1pn"/>
+                            <constraint firstItem="XGc-L6-uEy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vYf-Hb-ZRj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XGc-L6-uEy" secondAttribute="trailing" constant="16" id="xJO-RP-KiM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TSO-zU-ZOh" secondAttribute="trailing" constant="16" id="xkH-G5-PUb"/>
+                            <constraint firstItem="TSO-zU-ZOh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="z96-VU-ChG"/>
+                            <constraint firstItem="TSO-zU-ZOh" firstAttribute="height" secondItem="VnR-pR-ErF" secondAttribute="height" id="zX9-P8-0kX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enterLabel" destination="VnR-pR-ErF" id="URK-RZ-g7t"/>
+                        <outlet property="imageView" destination="QjQ-bh-nr1" id="tI4-8x-yXX"/>
+                        <outlet property="outputLabel" destination="XGc-L6-uEy" id="2l4-dQ-ceH"/>
+                        <outlet property="segControl" destination="TSO-zU-ZOh" id="qD0-Zt-YSS"/>
+                        <outlet property="textField" destination="s0f-c4-WFo" id="g7o-gI-Pup"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="-27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Temp1" width="263" height="943"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
